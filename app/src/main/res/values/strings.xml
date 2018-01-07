@@ -4,4 +4,11 @@
     <string name="btn_bilbao">Bilbao</string>
     <string name="btn_getReady">Get Ready</string>
     <string name="btn_profile">Profile</string>
+    <string name="btn_accident">Accident</string>
+    <string name="btn_goods">Stolen/Lost Goods</string>
+    <string name="btn_health">Health</string>
+    <string name="btn_violence">Violence</string>
+    <string name="btn_fire">Fire</string>
+    <string name="btn_map">Map</string>
+    <string name="btn_records">Records</string>
 </resources>
