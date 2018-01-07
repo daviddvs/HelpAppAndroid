@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eus.ehu.helpappandroid.helpappandroid.ContentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content_header_whatToDo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:clickable="true"
+                android:onClick="toggleContentsWhat"
+                android:text="What can I do?"/>
+            <TextView
+                android:id="@+id/content_whatToDo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/content_header_whereToGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:clickable="true"
+                android:onClick="toggleContentsWhere"
+                android:text="Where can I go?"/>
+            <TextView
+                android:id="@+id/content_whereToGo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/content_header_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:clickable="true"
+                android:onClick="toggleContentsTelephone"
+                android:text="Telephone"/>
+            <TextView
+                android:id="@+id/content_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/content_btn_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_route"
+                android:onClick="route"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+    <!-- Here is the footer-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/helpapp3" />
+        <Button android:id="@+id/main_btn_prev"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_prev"
+            android:drawableLeft="@drawable/left_arrow"
+            android:onClick="back"/>
+    </LinearLayout>
+
+</RelativeLayout>

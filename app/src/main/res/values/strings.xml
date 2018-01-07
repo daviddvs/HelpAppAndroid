@@ -29,4 +29,5 @@
     <string name="btn_rape">Rape</string>
     <string name="btn_brawl">Brawl</string>
     <string name="btn_building">Building</string>
+    <string name="btn_route">Route</string>
 </resources>

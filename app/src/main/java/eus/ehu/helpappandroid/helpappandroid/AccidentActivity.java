@@ -14,11 +14,17 @@ public class AccidentActivity extends AppCompatActivity {
     }
 
     public void traffic(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.TRAFFIC);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_ACCIDENT);
+        startActivity(intent);
     }
 
     public void domestic(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.DOMESTIC);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_ACCIDENT);
+        startActivity(intent);
     }
 
     public void back(View view) {

@@ -25,12 +25,16 @@
         <activity
             android:name=".GoodsActivity"
             android:label="@string/activity_goods" />
-        <activity android:name=".HealthActivity"
-            android:label="@string/activity_health"/>
-        <activity android:name=".ViolenceActivity"
-            android:label="@string/activity_violence"/>
-        <activity android:name=".FireActivity"
-            android:label="@string/activity_fire"></activity>
+        <activity
+            android:name=".HealthActivity"
+            android:label="@string/activity_health" />
+        <activity
+            android:name=".ViolenceActivity"
+            android:label="@string/activity_violence" />
+        <activity
+            android:name=".FireActivity"
+            android:label="@string/activity_fire" />
+        <activity android:name=".ContentActivity"></activity>
     </application>
 
 </manifest>
