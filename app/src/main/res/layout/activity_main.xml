@@ -26,6 +26,19 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/btn_bilbao"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/main_btn_getReady"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/btn_getReady"/>
+            <Button android:id="@+id/main_btn_profile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/btn_profile"/>
+        </LinearLayout>
 
     </LinearLayout>
 

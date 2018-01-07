@@ -2,4 +2,6 @@
     <string name="app_name">HelpApp</string>
     <string name="btn_prev">PREV</string>
     <string name="btn_bilbao">Bilbao</string>
+    <string name="btn_getReady">Get Ready</string>
+    <string name="btn_profile">Profile</string>
 </resources>
