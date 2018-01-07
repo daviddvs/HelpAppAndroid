@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">HelpApp</string>
+    <string name="activity_bilbao">Bilbao</string>
+    <string name="activity_accident">Accident</string>
     <string name="btn_prev">PREV</string>
     <string name="btn_bilbao">Bilbao</string>
     <string name="btn_getReady">Get Ready</string>
@@ -11,4 +13,6 @@
     <string name="btn_fire">Fire</string>
     <string name="btn_map">Map</string>
     <string name="btn_records">Records</string>
+    <string name="btn_traffic">Traffic</string>
+    <string name="btn_domestic">Domestic</string>
 </resources>
