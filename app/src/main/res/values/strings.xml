@@ -2,6 +2,10 @@
     <string name="app_name">HelpApp</string>
     <string name="activity_bilbao">Bilbao</string>
     <string name="activity_accident">Accident</string>
+    <string name="activity_goods">Goods</string>
+    <string name="activity_health">Health</string>
+    <string name="activity_violence">Violence</string>
+    <string name="activity_fire">Fire</string>
     <string name="btn_prev">PREV</string>
     <string name="btn_bilbao">Bilbao</string>
     <string name="btn_getReady">Get Ready</string>
@@ -15,4 +19,14 @@
     <string name="btn_records">Records</string>
     <string name="btn_traffic">Traffic</string>
     <string name="btn_domestic">Domestic</string>
+    <string name="btn_papers">Papers</string>
+    <string name="btn_theft">Theft</string>
+    <string name="btn_relative">Relative</string>
+    <string name="btn_luggage">Luggage</string>
+    <string name="btn_emergency">Emergency</string>
+    <string name="btn_consultation">Consultation</string>
+    <string name="btn_pharmacy">Pharmacy</string>
+    <string name="btn_rape">Rape</string>
+    <string name="btn_brawl">Brawl</string>
+    <string name="btn_building">Building</string>
 </resources>

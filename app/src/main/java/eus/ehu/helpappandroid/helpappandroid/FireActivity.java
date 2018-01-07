@@ -5,26 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class FireActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fire);
     }
 
-    public void bilbao(View view) {
+    public void building(View view) {
+
+    }
+
+    public void back(View view) {
         Intent intent = new Intent(this, BilbaoActivity.class);
         startActivity(intent);
     }
-
-    public void getReady(View view) {
-
-    }
-
-    public void profile(View view) {
-
-    }
-
-
 }

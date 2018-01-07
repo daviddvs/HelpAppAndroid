@@ -5,19 +5,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class AccidentActivity extends AppCompatActivity {
+public class GoodsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accident);
+        setContentView(R.layout.activity_goods);
     }
 
-    public void traffic(View view) {
+    public void papers(View view) {
 
     }
 
-    public void domestic(View view) {
+    public void theft(View view) {
+
+    }
+
+    public void relative(View view) {
+
+    }
+
+    public void luggage(View view) {
 
     }
 

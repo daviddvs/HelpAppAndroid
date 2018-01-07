@@ -18,11 +18,19 @@
         </activity>
         <activity
             android:name=".BilbaoActivity"
-            android:label="@string/activity_bilbao">
-        </activity>
-        <activity android:name=".AccidentActivity"
-            android:label="@string/activity_accident">
-        </activity>
+            android:label="@string/activity_bilbao" />
+        <activity
+            android:name=".AccidentActivity"
+            android:label="@string/activity_accident" />
+        <activity
+            android:name=".GoodsActivity"
+            android:label="@string/activity_goods" />
+        <activity android:name=".HealthActivity"
+            android:label="@string/activity_health"/>
+        <activity android:name=".ViolenceActivity"
+            android:label="@string/activity_violence"/>
+        <activity android:name=".FireActivity"
+            android:label="@string/activity_fire"></activity>
     </application>
 
 </manifest>

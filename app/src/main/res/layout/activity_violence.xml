@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="eus.ehu.helpappandroid.helpappandroid.AccidentActivity">
+    tools:context="eus.ehu.helpappandroid.helpappandroid.ViolenceActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,16 +12,14 @@
         android:gravity="center"
         android:orientation="vertical">
 
-    <Button android:id="@+id/accident_btn_traffic"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/btn_traffic"
-        android:onClick="traffic"/>
-    <Button android:id="@+id/accident_btn_domestic"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/btn_domestic"
-        android:onClick="domestic"/>
+        <Button android:id="@+id/violence_btn_rape"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_rape"/>
+        <Button android:id="@+id/violence_btn_brawl"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_brawl"/>
     </LinearLayout>
 
     <!-- Here is the footer-->

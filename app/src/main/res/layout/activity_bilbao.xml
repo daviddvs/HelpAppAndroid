@@ -15,38 +15,49 @@
         <Button android:id="@+id/bilbao_btn_accident"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/btn_accident"/>
+            android:text="@string/btn_accident"
+            android:onClick="accident"/>
         <Button android:id="@+id/bilbao_btn_goods"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/btn_goods"/>
+            android:text="@string/btn_goods"
+            android:onClick="goods"/>
         <Button android:id="@+id/bilbao_btn_health"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/btn_health"/>
+            android:text="@string/btn_health"
+            android:onClick="health"/>
         <Button android:id="@+id/bilbao_btn_violence"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/btn_violence"/>
+            android:text="@string/btn_violence"
+            android:onClick="violence"/>
         <Button android:id="@+id/bilbao_btn_fire"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/btn_fire"/>
+            android:text="@string/btn_fire"
+            android:onClick="fire"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button android:id="@+id/bilbao_btn_map"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/btn_map"/>
+                android:text="@string/btn_map"
+                android:drawableLeft="@drawable/location"
+                android:onClick="map"/>
             <Button android:id="@+id/bilbao_btn_profile"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/btn_profile"/>
+                android:text="@string/btn_profile"
+                android:drawableLeft="@drawable/user"
+                android:onClick="profile"/>
             <Button android:id="@+id/bilbao_btn_records"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/btn_records"/>
+                android:text="@string/btn_records"
+                android:drawableLeft="@drawable/microphone"
+                android:onClick="records"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -61,11 +72,13 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:src="@drawable/HelpApp3" />
+            android:src="@drawable/helpapp3" />
         <Button android:id="@+id/main_btn_prev"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/btn_prev"/>
+            android:text="@string/btn_prev"
+            android:drawableLeft="@drawable/left_arrow"
+            android:onClick="back"/>
     </LinearLayout>
 
 </RelativeLayout>
