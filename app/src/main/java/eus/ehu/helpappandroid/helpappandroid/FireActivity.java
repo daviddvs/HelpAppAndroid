@@ -14,7 +14,10 @@ public class FireActivity extends AppCompatActivity {
     }
 
     public void building(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.BUILDING);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_FIRE);
+        startActivity(intent);
     }
 
     public void back(View view) {

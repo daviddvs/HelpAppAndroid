@@ -14,19 +14,31 @@ public class GoodsActivity extends AppCompatActivity {
     }
 
     public void papers(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.PAPERS);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_GOODS);
+        startActivity(intent);
     }
 
     public void theft(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.THEFT);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_GOODS);
+        startActivity(intent);
     }
 
     public void relative(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.RELATIVE);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_GOODS);
+        startActivity(intent);
     }
 
     public void luggage(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.LUGGAGE);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_GOODS);
+        startActivity(intent);
     }
 
     public void back(View view) {

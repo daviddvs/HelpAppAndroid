@@ -14,14 +14,23 @@ public class HealthActivity extends AppCompatActivity {
     }
 
     public void emergency(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.EMERGENCY);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_HEALTH);
+        startActivity(intent);
     }
 
     public void consultation(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.CONSULTATION);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_HEALTH);
+        startActivity(intent);
     }
     public void pharmacy(View view) {
-
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(Content.ACTIVITY,Content.PHARMACY);
+        intent.putExtra(ContentActivity.CALLING_ACTIVITY, ContentActivity.ACTIVITY_HEALTH);
+        startActivity(intent);
     }
 
     public void back(View view) {
