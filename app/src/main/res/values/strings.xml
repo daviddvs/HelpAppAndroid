@@ -30,4 +30,7 @@
     <string name="btn_brawl">Brawl</string>
     <string name="btn_building">Building</string>
     <string name="btn_route">Route</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_finishTest">Finish</string>
+    <string name="btn_nextTest">Next</string>
 </resources>

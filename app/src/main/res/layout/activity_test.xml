@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="eus.ehu.helpappandroid.helpappandroid.TestActivity">
+
+
+    <!-- Here is the footer-->
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:id="@+id/test_wording"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:textSize="16dp"
+           android:text="Pregunta nueva: Elige una de las opciones"/>
+
+       <RadioGroup
+           android:id="@+id/test_choices"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <!-- Populated programatically -->
+       </RadioGroup>
+
+       <Button
+           android:id="@+id/button_send_test"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/btn_send"
+           android:onClick="send"/>
+
+       <Button
+           android:id="@+id/button_finish_test"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/btn_finishTest"
+           android:onClick="finishTest"/>
+
+       <Button
+           android:id="@+id/button_next_test"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/btn_nextTest"
+           android:onClick="next"/>
+
+   </LinearLayout>
+
+
+
+
+    <!-- Here is the footer-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developed By David"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -20,7 +20,7 @@
             android:id="@+id/image_logo"
             android:layout_width="94dp"
             android:layout_height="182dp"
-            android:src="@drawable/helpapp3"/>
+            android:src="@drawable/helpapp3_512x512"/>
 
         <Button android:id="@+id/main_btn_bilbao"
             android:layout_height="wrap_content"

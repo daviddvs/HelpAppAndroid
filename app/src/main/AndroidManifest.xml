@@ -34,7 +34,10 @@
         <activity
             android:name=".FireActivity"
             android:label="@string/activity_fire" />
-        <activity android:name=".ContentActivity"></activity>
+        <activity android:name=".ContentActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
