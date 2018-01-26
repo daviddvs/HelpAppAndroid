@@ -131,6 +131,18 @@ public class RecordsActivity extends AppCompatActivity {
             os.close();
             os=null;
 
+            String inFilePath;
+            Cursor cursor = getContentResolver().query(inputUri, null, null, null, null);
+            if (cursor == null) { // Source is Dropbox or other similar local file path
+                inFilePath = inputUri.getPath();
+            } else {
+                cursor.moveToFirst();
+                int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                inFilePath = cursor.getString(idx);
+                cursor.close();
+            }
+            new File(inFilePath).delete();
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
