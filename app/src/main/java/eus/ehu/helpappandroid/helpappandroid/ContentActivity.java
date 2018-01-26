@@ -1,6 +1,7 @@
 package eus.ehu.helpappandroid.helpappandroid;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -70,7 +71,30 @@ public class ContentActivity extends AppCompatActivity {
 
     public void route(View view) {
         //Google Maps functionallity
-
+        Uri gmmIntentUri;
+        switch (calling_activity) {
+            case ACTIVITY_ACCIDENT:
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                break;
+            case ACTIVITY_GOODS:
+                gmmIntentUri = Uri.parse("google.navigation:q=comisarias");
+                break;
+            case ACTIVITY_HEALTH:
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                break;
+            case ACTIVITY_VIOLENCE:
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                break;
+            case ACTIVITY_FIRE:
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                break;
+            default:
+                gmmIntentUri = Uri.parse("google.navigation:q=futbol");
+                break;
+        }
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
     }
 
     public void back(View view) {

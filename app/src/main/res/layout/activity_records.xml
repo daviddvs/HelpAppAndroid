@@ -4,38 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="eus.ehu.helpappandroid.helpappandroid.GoodsActivity">
+    tools:context="eus.ehu.helpappandroid.helpappandroid.RecordsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
 
-        <Button android:id="@+id/goods_btn_papers"
+        <Button android:id="@+id/records_btn_record"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="@string/btn_papers"
-            android:onClick="papers"/>
-        <Button android:id="@+id/goods_btn_theft"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_record"
+            android:onClick="recordAudio"/>
+        <Button android:id="@+id/records_btn_open"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="@string/btn_theft"
-            android:onClick="theft"/>
-        <Button android:id="@+id/goods_btn_relative"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="@string/btn_relative"
-            android:onClick="relative"/>
-        <Button android:id="@+id/goods_btn_luggage"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:text="@string/btn_luggage"
-            android:onClick="luggage"/>
+            android:layout_width="wrap_content"
+            android:text="@string/btn_open_audio"
+            android:onClick="openRecords"/>
+
+
     </LinearLayout>
 
-    <!-- Here is the footer-->
 
+    <!-- Here is the footer-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +38,7 @@
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:src="@drawable/helpapp3_512x512" />
-        <Button android:id="@+id/main_btn_prev"
+        <Button android:id="@+id/records_btn_prev"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/btn_prev"

@@ -33,4 +33,8 @@
     <string name="btn_send">Send</string>
     <string name="btn_finishTest">Finish</string>
     <string name="btn_nextTest">Next</string>
+    <string name="btn_record">Record Audio</string>
+    <string name="btn_open_audio">Open Audio</string>
+    <string name="no_micro">Your device has no micro</string>
+    <string name="no_app">Your device has no micro app</string>
 </resources>
