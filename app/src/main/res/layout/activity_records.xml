@@ -12,6 +12,12 @@
         android:orientation="vertical"
         android:layout_centerInParent="true"
         android:gravity="center">
+        <EditText
+            android:id="@+id/audio_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Select audio name..."
+            android:text="Prueba"/>
 
         <Button android:id="@+id/records_btn_record"
             android:layout_height="wrap_content"
