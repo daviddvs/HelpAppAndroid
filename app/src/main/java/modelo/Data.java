@@ -9,6 +9,7 @@ import java.util.List;
 public class Data {
     private static Data instance = null;
     private List<Question> questionList = null;
+    private User user = null;
 
     private Data() {
     }
@@ -25,5 +26,13 @@ public class Data {
 
     public void setQuestionList(List<Question> questionList) {
         this.questionList = questionList;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

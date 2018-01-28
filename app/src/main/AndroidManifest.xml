@@ -40,7 +40,8 @@
             android:label="@string/activity_fire" />
         <activity android:name=".ContentActivity" />
         <activity android:name=".TestActivity" />
-        <activity android:name=".RecordsActivity"></activity>
+        <activity android:name=".RecordsActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

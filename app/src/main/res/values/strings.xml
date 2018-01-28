@@ -37,4 +37,10 @@
     <string name="btn_open_audio">Open Audio</string>
     <string name="no_micro">Your device has no micro</string>
     <string name="no_app">Your device has no micro app</string>
+    <string name="user">User: </string>
+    <string name="password">Password: </string>
+    <string name="enter_password">enter password</string>
+    <string name="enter_user">enter user</string>
+    <string name="login">Login</string>
+    <string name="signin">Sign Up</string>
 </resources>

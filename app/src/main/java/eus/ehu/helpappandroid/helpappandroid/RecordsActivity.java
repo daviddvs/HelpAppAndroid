@@ -91,17 +91,18 @@ public class RecordsActivity extends AppCompatActivity {
     }
 
     public void openRecords(View view) {
-        /*
+/*
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_GET_CONTENT);
         intent.setType("audio/*");
         startActivity(intent);
-        */
+*/
 
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        Uri uri = Uri.parse(audioPath);
+        Uri uri = Uri.parse(audioPath+"/");
         intent.setDataAndType(uri, "*/*");
         startActivity(Intent.createChooser(intent, "Open folder"));
+
     }
 
     public void back(View view) {

@@ -48,7 +48,8 @@ public class BilbaoActivity extends AppCompatActivity {
     }
 
     public void profile(View view) {
-
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     public void records(View view) {
