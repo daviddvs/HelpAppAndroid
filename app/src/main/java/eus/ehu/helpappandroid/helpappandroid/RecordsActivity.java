@@ -10,7 +10,10 @@ import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,9 +21,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import modelo.AudioPlayer;
 import modelo.ProgressTask;
 
 public class RecordsActivity extends AppCompatActivity {
@@ -28,11 +33,15 @@ public class RecordsActivity extends AppCompatActivity {
     public static final int AUDIO_REQUEST_CODE = 2;
     private String audioName;
     private String audioPath;
+    private File[] files = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
+
+        File dirMusic = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
+        audioPath = dirMusic+"/HelpAppAudio";
     }
 
     @Override
@@ -43,8 +52,7 @@ public class RecordsActivity extends AppCompatActivity {
             // data.getData(): Esto devuelve uri en fromato content://
             // Lo que hay que hacer es coger el archivo, leerlo con un input stream y escribirlo con output stream en otro dir que yo elija
             //String filePath = "eus.ehu.helpappandroid/records";//modificar esto
-            final File dirMusic = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
-            audioPath = dirMusic+"/HelpAppAudio";
+
             //File dir = Environment.getDataDirectory();
             /*
             String filepath;
@@ -91,18 +99,43 @@ public class RecordsActivity extends AppCompatActivity {
     }
 
     public void openRecords(View view) {
-/*
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        intent.setType("audio/*");
-        startActivity(intent);
-*/
+        final ViewGroup layout = (ViewGroup) view.getParent();
 
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        Uri uri = Uri.parse(audioPath+"/");
-        intent.setDataAndType(uri, "*/*");
-        startActivity(Intent.createChooser(intent, "Open folder"));
+        if (files != null)
+            for(int i=0; i<files.length; i++) {
+                Button button = (Button)findViewById(i);
+                layout.removeView(button);
+            }
 
+        new ProgressTask<File[]>(this){
+            @Override
+            protected File[] work() throws Exception{
+                File directory = new File(audioPath);
+                files = directory.listFiles();
+                return files;
+            }
+            @Override
+            protected void onFinish(File[] files){
+                Toast.makeText(context, "Read files", Toast.LENGTH_SHORT).show();
+                for(int i = 0; i < files.length; i++){
+                    Button button = new Button(context);
+                    button.setText(files[i].getName());
+                    button.setId(i);
+                    button.setOnClickListener(new Button.OnClickListener(){
+                        public void onClick(View v) {
+                           playAudioRecord(v);
+                        }
+                    });
+                    layout.addView(button);
+                }
+            }
+        }.execute();
+    }
+
+    private void  playAudioRecord(View v) {
+        int id = v.getId();
+        Toast.makeText(this, "file://"+files[id].getPath(), Toast.LENGTH_SHORT).show();
+        playAudio("file://"+files[id].getPath(), (View)v.getParent().getParent() ); // /storage/emulated/0/Music/HelpAppAudio/Prueba.mp3", );
     }
 
     public void back(View view) {
@@ -152,5 +185,22 @@ public class RecordsActivity extends AppCompatActivity {
         }
 
         return outputPath+"/"+outputName;
+    }
+
+    private void playAudio(String advise, View view) {
+
+        Runnable run = new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        };
+        AudioPlayer audioPlayer = new AudioPlayer(view, run);
+        try {
+            audioPlayer.setAudioUri(Uri.parse(advise));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

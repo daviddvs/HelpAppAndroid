@@ -65,7 +65,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/signin_layout"
             android:layout_width="wrap_content"
@@ -153,10 +152,7 @@
                     android:onClick="close"
                     android:text="Close" />
             </LinearLayout>
-
-
         </LinearLayout>
-
 
     </LinearLayout>
 
@@ -190,6 +186,7 @@
             android:onClick="logout"
             android:gravity="center_horizontal"/>
     </LinearLayout>
+
 
     <!-- Here is the footer-->
     <LinearLayout
