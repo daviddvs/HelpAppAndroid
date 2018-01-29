@@ -104,6 +104,7 @@ public class RecordsActivity extends AppCompatActivity {
                     Button button = new Button(context);
                     button.setText(files[i].getName());
                     button.setId(i);
+                    button.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play,0,0,0);
                     button.setOnClickListener(new Button.OnClickListener(){
                         public void onClick(View v) {
                            playAudioRecord(v);

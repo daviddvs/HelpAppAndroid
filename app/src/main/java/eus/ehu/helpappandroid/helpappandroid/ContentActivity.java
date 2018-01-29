@@ -74,13 +74,13 @@ public class ContentActivity extends AppCompatActivity {
         Uri gmmIntentUri;
         switch (calling_activity) {
             case ACTIVITY_ACCIDENT:
-                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales&mode=w");
                 break;
             case ACTIVITY_GOODS:
-                gmmIntentUri = Uri.parse("google.navigation:q=comisarias");
+                gmmIntentUri = Uri.parse("google.navigation:q=comisarias&mode=w");
                 break;
             case ACTIVITY_HEALTH:
-                gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
+                gmmIntentUri = Uri.parse("google.navigation:q=hospitales&mode=d");
                 break;
             case ACTIVITY_VIOLENCE:
                 gmmIntentUri = Uri.parse("google.navigation:q=hospitales");
