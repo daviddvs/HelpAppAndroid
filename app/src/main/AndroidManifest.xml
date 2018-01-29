@@ -38,10 +38,18 @@
         <activity
             android:name=".FireActivity"
             android:label="@string/activity_fire" />
-        <activity android:name=".ContentActivity" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".RecordsActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity
+            android:name=".ContentActivity"
+            android:label="@string/activity_content"/>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/activity_test"/>
+        <activity
+            android:name=".RecordsActivity"
+            android:label="@string/activity_records"/>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/activity_profile"/>
     </application>
 
 </manifest>

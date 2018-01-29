@@ -6,6 +6,10 @@
     <string name="activity_health">Health</string>
     <string name="activity_violence">Violence</string>
     <string name="activity_fire">Fire</string>
+    <string name="activity_content">Content</string>
+    <string name="activity_test">Test</string>
+    <string name="activity_profile">Profile</string>
+    <string name="activity_records">Records</string>
     <string name="btn_prev">PREV</string>
     <string name="btn_bilbao">Bilbao</string>
     <string name="btn_getReady">Get Ready</string>
