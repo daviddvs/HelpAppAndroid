@@ -103,11 +103,9 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void logout(View v){
-
         Toast.makeText(this, "Bye", Toast.LENGTH_SHORT).show();
         findViewById(R.id.login_layout).setVisibility(View.VISIBLE);
         findViewById(R.id.profile_layout).setVisibility(View.GONE);
-
     }
 
     public void back(View v) {
@@ -124,10 +122,8 @@ public class ProfileActivity extends AppCompatActivity {
         textGender.setText("Your gender: "+data.getUser().getGender());
         TextView textCountry = (TextView)findViewById(R.id.profile_country);
         textCountry.setText("Your country: "+data.getUser().getCountry());
-
-
-
     }
+
     private void saveUser() {
         SharedPreferences prefs = getSharedPreferences(userId,MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

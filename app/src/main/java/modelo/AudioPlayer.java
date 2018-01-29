@@ -61,7 +61,6 @@ public class AudioPlayer
         controller.show(0);
     }
 
-
     @Override
     public void start() {
         player.start();
@@ -115,6 +114,5 @@ public class AudioPlayer
     public int getAudioSessionId() {
         return player.getAudioSessionId();
     }
-
 
 }

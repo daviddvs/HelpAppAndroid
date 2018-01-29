@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="eus.ehu.helpappandroid.helpappandroid.ProfileActivity">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <LinearLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"
@@ -64,6 +70,7 @@
                 android:onClick="signup"/>
 
         </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/signin_layout"
@@ -156,12 +163,15 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/profile_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp">
 
         <TextView
             android:id="@+id/profile_id"
@@ -183,29 +193,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Logout"
-            android:onClick="logout"
-            android:gravity="center_horizontal"/>
+            android:onClick="logout" />
     </LinearLayout>
-
-
-    <!-- Here is the footer-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/helpapp3_512x512" />
-        <Button android:id="@+id/records_btn_prev"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/btn_prev"
-            android:drawableLeft="@drawable/left_arrow"
-            android:onClick="back"/>
     </LinearLayout>
-
-
+    </ScrollView>
 
 </RelativeLayout>
