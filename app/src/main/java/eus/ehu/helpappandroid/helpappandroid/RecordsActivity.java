@@ -118,7 +118,7 @@ public class RecordsActivity extends AppCompatActivity {
 
     private void  playAudioRecord(View v) {
         int id = v.getId();
-        Toast.makeText(this, "file://"+files[id].getPath(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "file://"+files[id].getPath(), Toast.LENGTH_SHORT).show();
         playAudio("file://"+files[id].getPath(), (View)v.getParent().getParent() ); // /storage/emulated/0/Music/HelpAppAudio/Prueba.mp3", );
     }
 
