@@ -16,6 +16,7 @@ import org.json.JSONException;
 import java.io.IOException;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,6 +39,8 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+
+        questionList = shuffleQuestions();
         try {
             fillTest();
         } catch (IOException e) {
@@ -88,7 +91,6 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void next(View v) {
-
         findViewById(R.id.button_next_test).setVisibility(View.GONE);
         group.removeAllViews();
         try {
@@ -98,11 +100,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
     }
 
     public void send(View v) {
-
         int radioButtonId = group.getCheckedRadioButtonId();//Este id no es la posicion del radioButton
         View radioButton = group.findViewById(radioButtonId);
         int selected = group.indexOfChild(radioButton);
@@ -159,5 +159,15 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_send_test).setVisibility(View.VISIBLE);
     }
 
+    private List<Question> shuffleQuestions() {
+        List<Question> list = new ArrayList<Question>();
+        int arrayLength = questionList.size();
 
+        for (int i = 0; i<arrayLength; i++){
+            long j = Math.round(Math.random()*(questionList.size()-1));
+            list.add(questionList.get((int)j));
+            questionList.remove((int)j);
+        }
+        return list;
+    }
 }
